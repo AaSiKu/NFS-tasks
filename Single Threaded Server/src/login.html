@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: #0059ffa6;
+
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      padding-top: 18%;
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #0919fa;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #023daafd;
+    }
+
+    #username,
+    #password {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #0919fa;
+      font-size: 16px;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #023daafd;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/About">About</a>
+    <a href="/Services">Services</a>
+    <a href="/Contact">Contact</a>
+    <a href="/Login" class=".login">Login</a>
+    <a href="/Random">Click me to get 500 error</a>
+  </nav>
+  <div>
+    <form action="/login" method="post">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</body>
+
+</html>
