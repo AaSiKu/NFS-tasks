@@ -1,0 +1,28 @@
+// strings4.rs
+//
+// Ok, here are a bunch of values-- some are `String`s, some are `&str`s. Your
+// task is to call one of these two functions on each value depending on what
+// you think each value is. That is, add either `string_slice` or `string`
+// before the parentheses on each line. If you're right, it will compile!
+//
+// No hints this time!
+
+
+fn string_slice(arg: &str) {
+    println!("{}", arg);
+}
+fn string(arg: String) {
+    println!("{}", arg);
+}
+
+fn main() {
+    string_slice("blue");
+    string(String::from("hi"));
+    string("rust is fun!".to_owned()); // to_owned() is the same as to_string(), what does it do?Answer: It converts a string slice (&str) to a String.
+    string("nice weather".into());// into() is the same as to_string(), what does it do?Answer: It converts a string slice (&str) to a String.
+    string(format!("Interpolation {}", "Station"));
+    string_slice(&String::from("abc")[0..1]);
+    string_slice("  hello there ".trim()); // trim() removes leading and trailing whitespace from a string.It returns a string slice (&str).
+    string("Happy Monday!".to_string().replace("Mon", "Tues"));
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase());
+}
